@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackpot Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* กล่องหลักขนาดใหญ่ด้านล่าง */
+        .main-jackpot-container {
+            background: linear-gradient(180deg, #10203e 0%, #0c152b 100%);
+            border: 2px solid #1d355e;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 450px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .realtime-tag {
+            color: #4cd9ff;
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .realtime-tag::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #4cd9ff;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #4cd9ff;
+        }
+
+        .main-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* โซนแสดงมูลค่ารวม */
+        .value-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .value-title {
+            color: #a0aec0;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .number-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .currency-symbol {
+            color: #ffffff;
+            margin-right: 4px;
+        }
+
+        .digit-slot {
+            background: linear-gradient(180deg, #1a3668 0%, #0d1e3d 100%);
+            border: 1px solid #2b4c8c;
+            border-radius: 8px;
+            padding: 4px 10px;
+            min-width: 28px;
+            text-align: center;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .comma {
+            padding: 0 2px;
+            align-self: flex-end;
+        }
+
+        /* โซนกล่องคู่ด้านล่าง */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .sub-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .sub-title {
+            color: #a0aec0;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .sub-value {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .highlight-gold {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนกล่องแจ็คพอตหลัก -->
+    <div class="main-jackpot-container">
+        <div class="realtime-tag">อัปเดตแบบเรียลไทม์</div>
+        <div class="main-title">แจ็คพอตรวม</div>
+
+        <div class="value-box">
+            <div class="value-title">มูลค่ารวม</div>
+            <div class="number-display">
+                <span class="currency-symbol">฿</span>
+                <span class="digit-slot">1</span>
+                <span class="digit-slot">1</span>
+                <span class="comma">.</span>
+                <span class="digit-slot">2</span>
+                <span class="digit-slot">7</span>
+                <span class="digit-slot">7</span>
+                <span class="comma">.</span>
+                <span class="digit-slot">1</span>
+                <span class="digit-slot">5</span>
+                <span class="digit-slot">7</span>
+            </div>
+        </div>
+
+        <div class="bottom-grid">
+            <div class="sub-box">
+                <div class="sub-title">ผู้ชนะล่าสุด</div>
+                <div class="sub-value">1,156</div>
+            </div>
+            <div class="sub-box">
+                <div class="sub-title">รางวัลสูงสุด</div>
+                <div class="sub-value highlight-gold">฿159,168</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
